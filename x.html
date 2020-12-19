@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // EJERCICIO1
+        a = (simon) =>{
+            for (let i = 0; i < simon; i++) {
+                const element = i;
+                if (element%2===0) {
+                    console.log(`el numero ${element} es par`)
+                }else{
+                    console.log(element)
+                }
+            }
+        }
+
+         //a(100)
+
+
+    // EJERCICIO2
+
+
+        b = (saimon) =>{
+            for (let o = 0; o < saimon; o++) {
+                const elementi = o;
+                if(elementi%2===0){
+                    console.log(elementi)
+                }else{
+                    console.log(`el numero es ${elementi} y no es par`)
+                }
+            }
+        }
+        //b(100)
+    
+    // EJERCICIO3
+
+    function sumattion(params) {
+        let resultado = params
+        while (params > 1){
+            resultado = (params - 1) + resultado
+            params--
+        }
+        console.log(resultado)
+    }
+    let y = sumattion(8)
+    
+
+    // EJERCICIO4
+    
+    c = (nuevoArreglo) => {
+        let arreglo = []
+        for (let i = 1; i <= nuevoArreglo; i++) {
+            arreglo.push(i)
+        }
+        return arreglo
+    }
+
+    //EJERCICIO5
+
+    const e = ("hola mundo")
+
+    eFuncion = (similarString) =>{
+        return [...similarString]
+    }
+    //console.log(eFuncion(e))
+    
+
+    //EJERCICIO6
+
+    f = (salomona)=>{
+        let salomona2 = salomona.length
+        let salo = 2
+        const resultado = salomona2 / salo
+        let segundaLetra = salomona.charAt(resultado)
+        let primeraLetra = salomona.charAt(resultado -1)
+        const sumatoria = primeraLetra + segundaLetra
+        if(salomona2%2==0){
+            console.log(sumatoria)
+        }else{
+            console.log(segundaLetra)
+        }
+    }
+    //f("uvas")
+
+    //EJERCICIO7
+
+    g = (moveZeros) => {
+        for (let i = 0; i < moveZeros.length; i++) {
+            moveZeros.sort().reverse('')
+            
+        }
+        console.log(moveZeros)
+    }
+    //g([false,1,0,1,2,0,1,3,"a"])
+
+    //EJERCICIO8
+
+    function h(arreglos, numeroArreglo) {
+        for (let i = 0; i < arreglos.length; i++) {
+            const elementpalabra = arreglos[i];
+            const elementnumero = numeroArreglo[i]
+            console.log(`${elementpalabra} ${elementnumero}`)
+        }
+    }
+
+    h(["h","o","l","a"],[1,2,3,4])
+
+    //EJERCICIO 9
+
+    mezclarArreglos=(arreglo1, arreglo2)=>{
+    let arregloNuevo=[]
+    for(let i=0; i<arreglo1.length && i<arreglo2.length; i++){
+        arregloNuevo.push(arreglo1[i])
+        arregloNuevo.push(arreglo2[i])
+        }
+        if(arreglo1.length>arreglo2.length){
+            for (i=arreglo2.length;i<arreglo1.length;i++){
+                arregloNuevo.push(arreglo1[i])
+            }
+        } else if (arreglo2.length>arreglo1.length){
+            for (i=arreglo1.length;i<arreglo2.length;i++){
+            arregloNuevo.push(arreglo2[i])}
+        }
+    return arregloNuevo
+    }
+    mezclarArreglos(["h","o","l","a"],[1,2,3,4])
+    //EJERCICIO 10 
+    it = (minSum) =>{
+        h = minSum[0]
+        for (let i = 0; i < minSum.length; i++) {
+            if(minSum[i]<h){
+                h = minSum[i]
+            }
+        }
+        minSum.splice(minSum.indexOf(h))
+        g = minSum[0]
+        for (let i = 0; i < minSum.length; i++) {
+            if(minSum[i]<g){
+                g = minSum[i]
+            }
+        }
+        console.log(g + h)
+    }
+    //it([7, 6, 5, 4, 3, 2, 1])
+    //EJERCICIO11
+
+    is = (arregloDeObjetos) => {
+        arregloss = []
+        for (let i = 1; i <= arregloDeObjetos; i++) {
+            arregloss.push({valor: i})
+        }
+        console.log(arregloss)
+    }
+    //is(5)
+
+    //EJERCICIO12
+
+    
+    const g = "chau"
+    oj[g]= 5
+
+    g = (numeroObj, textoObj) => {
+        const ui = []
+        for (let i = 1; i <= numeroObj; i++) {
+            const oj = {}
+            oj[textoObj] = i;
+            {chau: 1}
+
+            ui.push(oj)
+        }
+        console.log(ui)
+    }
+
+    //g(5, "chau")|
+
+    //EJERCICIO14
+
+    warWord = (palabra1, palabra2) =>{
+        var abc = {a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,o:15,p:16,q:17,r:18,s:19,t:20,u:21,v:22,w:23,x:24,y:25,z:26}
+        palabraAn = 0
+        palabraAn2 = 0
+        for (let i = 0; i < palabra1.length; i++) {
+            palabraAn += abc[palabra1[i]]
+        }
+        for (let i = 0; i < palabra2.length; i++) {
+            palabraAn2 += abc[palabra2[i]]
+        }
+        if(palabraAn > palabraAn2){
+            return palabra1
+        }else{
+            return palabra2
+        }
+    }
+
+    //EJERCICIO15
+    function validarPrefijos(param){
+        let parametro = {}
+        let prefijos = [54, 55, 56, 57, 58]
+        let paises = ["argentina", "brasil", "chile", "colombia", "venezuela"]
+        for (let i = 0; i < prefijos.length; i++) {
+            parametro[prefijos[i]]=paises[i]
+        }
+        if(typeof param === "number"){
+            param = param.toString()
+        }
+        numeroPais = param.slice(0,2)
+        if(numeroPais in parametro){
+            console.log(`el numero pertenece a ${parametro[numeroPais]}`)
+        }else{
+            console.log("el numero no existe, salame")
+        }
+    }
+    validarPrefijos(5478963210)
+
+    //EJERCICIO16
+
+    reverseKeys = (parram) => {
+        if (typeof parram == "number") {
+            console.error("no puede ser un numero");
+        }else if(typeof parram == "string"){
+            console.error("no puede ser una cadena");
+        }else if(typeof parram == Array.isArray(parram)){
+            console.error("no puede ser una cadena");
+        }else{
+            nuevoObjeto = {}
+            for (const propiedad in parram) {
+                if(typeof parram[propiedad] == "string"){
+                    nuevoObjeto[parram[propiedad]] = propiedad
+                }else{
+                    nuevoObjeto[propiedad] = parram[propiedad]
+                }
+            }
+            return nuevoObjeto
+        }
+    }
+    var prueba = {
+	nombre: "santi",
+	edad: 22,
+	nacionalidad: "de otro planeta",
+	documento: 44444444
+	
+    }
+
+
+    //EJERCICIO17
+    const palindromo = (palabra = "") =>{
+        if(!palabra)
+        palabra = palabra.toLowerCase();
+        let palabraAlRevez = palabra.split("").reverse().join("");
+        if(palabra === palabraAlRevez){
+            console.log(true)
+        }else{
+            console.log(false)
+        }
+    }
+    //palindromo("hola mundo")
+    //EJERCICIO19
+
+    x =(consecutivosSimilares)=>{
+        cont = 0
+        for (let i = 0; i < consecutivosSimilares.length; i++) {
+            if(consecutivosSimilares[i] == consecutivosSimilares[i + 1]){
+                cont++
+            }
+        }             
+        console.log(cont)
+    }
+    //x("AAAAAABB")
+</script>
+</body>
+</html>
